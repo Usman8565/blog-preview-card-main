@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Blog preview card</title>
+
+    <style>
+      @font-face {
+        font-family: Figtree;
+        src: url(assets/fonts/Figtree-VariableFont_wght.ttf);
+      }
+      :root {
+        --Yellow: hsl(47, 88%, 63%);
+        --White: hsl(0, 0%, 100%);
+        --Grey: hsl(0, 0%, 50%);
+        --Black: hsl(0, 0%, 7%);
+      }
+
+      * {
+        box-sizing: border-box;
+        font-family: Figtree;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      main {
+        background-color: var(--Yellow);
+        height: 100svh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card{
+        width: 290px;
+        height: 400px;
+        padding: 1rem;
+        border-radius: 16px;
+        background-color: var(--White);
+        border: 1px solid var(--Black);
+        box-shadow: var(--Black) 6px 6px;
+        transition: all ease-in-out .2s;
+      }
+      .card:hover{
+        cursor: pointer;
+        box-shadow: var(--Black) 12px 12px;
+
+        h1{
+          color: var(--Yellow);
+        }
+
+      }
+      .card img{
+        width: 100%;
+        display: block;
+        border-radius: 8px;
+      }
+      .card .hilight{
+        display: inline-block;
+        padding: 5px 10px;
+        background-color: var(--Yellow);
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 800;
+      }
+      .card .black{
+        font-size: 12px;
+        color: var(--Black);
+        font-weight: 600;
+        margin: 0;
+      }
+
+      .card h1{
+        font-size: 18px;
+        font-weight: 800;
+        color: var(--Black);
+        transition: all ease-in-out .2s;
+      }
+
+      .card .txt{
+        font-size: 12px;
+        color: var(--Grey);
+        line-height: 1.5;
+        letter-spacing: 1px;
+      }
+
+      .card .person-info{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+      }
+      .card .person-info img{
+        width: 25px;
+        display: block;
+      }
+
+      .card .person-info span{
+        font-size: 12px;
+        font-weight: 800;
+        margin-left: 8px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <main>
+      <div class="card">
+        <img src="assets/images/illustration-article.svg" alt="">
+        <p class="hilight">Learning</p>
+        <p class="black">Published 15 Feb 2024</p>
+        <h1>HTML & CSS foundations</h1>
+        <p class="txt">These languages are the backbone of every website, defining structure, content, and presentation.</p>
+        <div class="person-info">
+          <img src="assets/images/image-avatar.webp" alt="">
+          <span>Grag Hooper</span>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
